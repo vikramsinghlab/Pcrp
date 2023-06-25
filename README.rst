@@ -2,7 +2,7 @@
 pcrp
 ===============================
 
-pcrp (plant circaidan rhythm protein predictor) uses random walk with restart and subgraph automorphism to learn representations for vertices in a protein interaction netowrk and return nodes having similar representations to the seed nodes.
+pcrp (plant circadian rhythm protein predictor) uses random walk with restart and subgraph automorphism to learn representations for vertices in a protein interaction network and return nodes having similar representations to the seed nodes.
 
 Usage
 -----
@@ -12,7 +12,7 @@ Usage
 
 **--output**: *output_filename*
 
-    The output is present in a file named plantCR_linkage.txt inside the results directory created on runtime. The output file is tab separated where first column contains the predicted circadian clock associated proteins and the second column conatins the lagorithm supporting the prediction i.e. `RWR` (random walk with restart) or `GDV` (graphlet degree vector) or `RWR and GDV` (when both are supporing the prediction). Intermediate results are saved in `temp` directory created at runtime in the current working directory.
+    The output is in a file named plantCR_linkage.txt inside the results directory created on runtime. The output file is tab separated where the first column contains the predicted circadian clock-associated proteins and the second column contains the algorithms supporting the prediction, i.e. `RWR` (random walk with restart) or `GDV` (graphlet degree vector) or `RWR and GDV` (when both are supporting the prediction). Intermediate results are saved in the `temp` directory created at runtime in the current working directory.
         
         Ote100040090151 GDV
         Ote100214260021 RWR and GDV
@@ -20,13 +20,21 @@ Usage
         ...
 
 **Full Command List**
-    The full list of command line options is available with ``$pcrp --help``
+    The complete list of command line options is available with ``$pcrp --help``
 
 
 Requirements
 ------------
-* numpy
-* pandas
+* wheel>=0.23.0
+* Cython>=0.20.2
+* argparse>=1.2.1
+* networkx>=2.6.3
+* numpy>=1.21.2
+* pandas>=1.3.5
+* scikit_learn>=1.0.2
+* scipy>=1.7.3
+* sympy>=1.9
+* tqdm>=4.65.0
 
 (may have to be independently installed) 
 
@@ -46,7 +54,7 @@ If you find `pcrp` useful in your research, we ask that you cite the following p
 
 @article{Singh2022.03.02.482599,
     author = {Vikram Singh and Vikram Singh},
-    title = {Characterizing circadian connectome of O. tenuiflorum using an integrated network theoretic framework},
+    title = {Characterizing circadian connectome of *O. tenuiflorum* using an integrated network theoretic framework},
     elocation-id = {2022.03.02.482599},
     year = {2022},
     doi = {10.1101/2022.03.02.482599},

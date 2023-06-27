@@ -38,7 +38,10 @@ Requirements
 
 (may have to be independently installed) 
 
+Data
+----
 
+The data used in this study can be accessed `here. <https://drive.google.com/file/d/1gOr3o86V2y-g470U3FK-ue4N3PN9itjJ/view?usp=sharing>`__
 
 Installation
 ------------
